@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/primary_material_light"
+        android:weightSum="1"
+        android:gravity="left">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="사용 가능한 컨텐츠 수"
+            android:id="@+id/text_contents"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.04" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(0)"
+            android:id="@+id/text_contentsNum"
+            android:layout_weight="0.04" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.92"
+            android:gravity="center_vertical|right"
+            android:id="@+id/"
+            android:weightSum="1"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guest"
+                android:id="@+id/text_userName"
+                android:layout_gravity="center_vertical|right" />
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="45dp"
+                android:id="@+id/imgBtn_settings" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="추천 컨텐츠"
+            android:id="@+id/text_recommendContents" />
+
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25" />
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="android.support.v4.app.ListFragment"
+            android:id="@+id/fragment"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.56" />
+    </LinearLayout>
+
+</LinearLayout>
