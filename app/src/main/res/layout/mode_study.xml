@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="(0)"
+            android:text="(-)"
             android:id="@+id/text_contentsNum"
             android:layout_weight="0.04" />
 
@@ -33,14 +33,13 @@
             android:layout_height="match_parent"
             android:layout_weight="0.92"
             android:gravity="center_vertical|right"
-            android:id="@+id/"
             android:weightSum="1"
             android:layout_marginRight="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Guest"
+                android:text="-"
                 android:id="@+id/text_userName"
                 android:layout_gravity="center_vertical|right" />
 

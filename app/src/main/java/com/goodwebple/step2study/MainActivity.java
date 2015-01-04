@@ -32,11 +32,12 @@ public class MainActivity extends ActionBarActivity {
 
         // TODO : Allow user to make firstRun boolean "false" in Settings menu.
 
-        Button btn = (Button) findViewById(R.id.button);
+        Button introBtn = (Button) findViewById(R.id.button);
+        Button rankBtn = (Button) findViewById(R.id.btn_challengeMode);
         // for Debugging (show IntroPage)
-        btn.setOnClickListener(new Button.OnClickListener() {
+        rankBtn.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                Intent intentSubActivity = new Intent(MainActivity.this, IntroActivity.class);
+                Intent intentSubActivity = new Intent(MainActivity.this, RankModeActivity.class);
                 startActivity(intentSubActivity);
             }
         });
