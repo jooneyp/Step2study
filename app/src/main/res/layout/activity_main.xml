@@ -18,7 +18,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="showIntro"
+        android:text="DBManager"
         android:id="@+id/btn_show_intro"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -72,6 +72,15 @@
         android:text="스토어"
         android:id="@+id/btn_store"
         android:layout_alignBottom="@+id/btn_summary"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="InitDB"
+        android:id="@+id/btn_dbinit"
+        android:layout_below="@+id/btn_store"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 

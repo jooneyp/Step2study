@@ -1,7 +1,6 @@
 package com.goodwebple.step2study;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
@@ -47,15 +46,5 @@ public class DatabaseAdapter {
 
     public void close() {
         mDbHelper.close();
-    }
-
-    public Cursor getRankModeData(String cardpack, int ansNum) {
-        String sql = "SELECT mean, word FROM " + cardpack + " ORDER BY random() LIMIT " + ansNum + ";";
-        
-        Cursor mCur = mDb.rawQuery(sql, null);
-        if (mCur != null) {
-            mCur.moveToNext();
-        }
-        return mCur;
     }
 }
