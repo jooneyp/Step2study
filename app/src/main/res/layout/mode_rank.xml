@@ -72,7 +72,9 @@
             android:id="@+id/progressBar"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.02"
-            android:indeterminate="false" />
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="100" />
 
         <TextView
             android:layout_width="match_parent"

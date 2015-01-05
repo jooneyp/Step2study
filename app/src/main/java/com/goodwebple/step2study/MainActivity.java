@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.IOException;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -32,8 +34,9 @@ public class MainActivity extends ActionBarActivity {
 
         // TODO : Allow user to make firstRun boolean "false" in Settings menu.
 
-        Button introBtn = (Button) findViewById(R.id.button);
+        Button introBtn = (Button) findViewById(R.id.btn_show_intro);
         Button rankBtn = (Button) findViewById(R.id.btn_challengeMode);
+        Button dbInitBtn = (Button) findViewById(R.id.btn_dbinit);
         // for Debugging (show IntroPage)
         rankBtn.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
@@ -41,11 +44,28 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(intentSubActivity);
             }
         });
+        introBtn.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent dbManager = new Intent(MainActivity.this, AndroidDatabaseManager.class);
+                startActivity(dbManager);
+            }
+        });
+        dbInitBtn.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
+                try {
+                    dbHelper.createDataBase();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
     }
-
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
