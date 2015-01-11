@@ -6,5 +6,6 @@
     <string name="action_settings">Settings</string>
     <string name="action_previous">Previous</string>
     <string name="title_template_step">Step <xliff:g id="step_number">%1$d</xliff:g>: Lorem Ipsum</string>
+    <string name="facebook_app_id"></string>
 
 </resources>
